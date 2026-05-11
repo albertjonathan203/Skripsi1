@@ -17,4 +17,10 @@ def root():
 def predict(data: InputData):
     features = np.array(data.features).reshape(1, -1)
     prediction = model.predict(features)
-    return {"prediction": prediction.tolist()}
+    
+    label = "Akun Buzzer" if prediction[0] == 1 else "Pengguna Asli"
+    
+    return {
+        "prediction": int(prediction[0]),
+        "label": label
+    }
