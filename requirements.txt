@@ -3,6 +3,3 @@ uvicorn
 scikit-learn
 joblib
 numpy
-imbalanced-learn
-xgboost
-scipy
